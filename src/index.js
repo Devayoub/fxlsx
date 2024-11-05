@@ -49,7 +49,7 @@ async function excelify(filePath) {
     if (sheetFile) {
       const xmlString = await sheetFile.content.async("string");
       const sheetData = parseXMLWithSAX(xmlString, sharedStrings); // Pass sharedStrings for content lookup
-      console.log('Parsed Sheet Data:', sheetData);
+       return sheetData
     } else {
       console.error('No sheet XML file found in ZIP');
     }
