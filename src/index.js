@@ -31,7 +31,7 @@ function parseSharedStrings(xmlString) {
 }
 
 
-async function fxlsx(filePath) {
+async function excelify(filePath) {
   try {
     const arrayBuffer = await readFileAsArrayBuffer(filePath);
     const zipEntries = await decompressZIP(arrayBuffer);
@@ -58,4 +58,4 @@ async function fxlsx(filePath) {
   }
 }
 
-module.exports = { fxlsx };
+module.exports = { excelify };
